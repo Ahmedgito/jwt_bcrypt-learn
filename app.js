@@ -44,6 +44,24 @@ app.post("/create", (req, res) => {
 
 });
 
+app.get("/login", (req, res) => {
+
+    res.render('login');
+
+});
+
+app.post("/login", async (req, res) => {
+
+ let user = await userModel.findOne({
+        email : req.body.email,
+    })
+
+    bcrypt.compare(req.body.password, user.password , (err,result) =>{
+        if(result) res.send("You can login") 
+        else res.send("No you cannot login") 
+    } )
+
+});
 
 app.get("/logout", (req, res) => {
 
