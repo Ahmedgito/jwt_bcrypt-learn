@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Create User</title>
+</head>
+
+<body class="bg-zinc-950 text-white min-h-screen flex items-center justify-center px-4">
+    <div class="w-full max-w-xl">
+        <div class="mb-8 text-center">
+            <a href="/read" class="text-sm text-blue-400 hover:underline">View All Users</a>
+            <h1 class="text-4xl font-semibold mt-4">Create User</h1>
+        </div>
+        <form action="/create" method="post" class="bg-zinc-900 p-8 rounded-2xl shadow-xl space-y-5">
+            <input
+                class="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="text" name="name" placeholder="Name" required />
+
+            <input
+                class="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="email" name="email" placeholder="Email" required />
+
+            <input
+                class="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="password" name="password" placeholder="Enter Password" required />
+
+            <input
+                class="w-full px-4 py-3 rounded-lg bg-zinc-800 border border-zinc-700 placeholder-zinc-400 focus:outline-none focus:ring-2 focus:ring-blue-500 transition"
+                type="number" name="age" placeholder="Age" required />
+
+            <button type="submit"
+                class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-medium transition">Create User</button>
+        </form>
+    </div>
+</body>
+
+</html>
